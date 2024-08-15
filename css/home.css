@@ -218,7 +218,7 @@ article p{
 }
 
 #text1 {
-    background-color: rgba(0, 0, 0, 0.7); /* Color negro con 70% de opacidad */
+    background-color: rgba(50, 50, 50, 0.4); /* Color negro con 70% de opacidad */
     border-radius: 15px; /* Bordes redondeados */
     padding: 20px; /* Espacio interno */
     color: white; /* Texto en color blanco para contraste */
