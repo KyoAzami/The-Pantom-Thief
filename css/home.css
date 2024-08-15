@@ -17,10 +17,14 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: black;
+    background-color: #0d0d0d;
     width: 100%; /* Hace que el header ocupe todo el ancho de la pantalla */
     box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total del header */
-    position: relative; /* Permite la alineación correcta dentro del flujo del documento */
+    position: fixed; /* Fija el header en la parte superior */
+    left: 0;/*Cubre el total del margen izquierdo*/
+    right: 0;/*Cubre el total del margen derecho*/
+    top: 0; /* Mantiene el header en la parte superior */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
 }
 
 header h1 {
@@ -57,21 +61,14 @@ header h1 {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #0d0d0d;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
 }
 
-.side-menu div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-    width: 80%; /* Hace que el header ocupe todo el ancho de la pantalla */
-    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total del header */
-    position: relative; /* Permite la alineación correcta dentro del flujo del documento */
+#list{
+    margin-top: 170px;
 }
 
 #list a {
@@ -94,16 +91,17 @@ header h1 {
 
 #main-content {
     transition: margin-left 0.5s;
+    margin-top: 170px;
 }
 
 /* Ancho del menú cuando está desplegado */
 .side-menu.active {
-    width: 250px;
+    width: 200px;
 }
 
 /* Mueve el contenido principal cuando el menú está desplegado */
 #main-content.active {
-    margin-left: 250px;
+    margin-left: 200px;
 }
 
 header a {
@@ -111,21 +109,8 @@ header a {
     text-decoration: none;
 }
 
-.logo{
-    margin-left: auto;
-    text-decoration: none;
-}
-
-
 /* Estilos generales */
 header a::before {
-    content: url('../imagenes/logo2.png');
-    display: inline-block;
-    width: 150px; /* Tamaño del ícono en pantallas grandes */
-    height: 150px;
-}
-
-.logo::before {
     content: url('../imagenes/logo2.png');
     display: inline-block;
     width: 150px; /* Tamaño del ícono en pantallas grandes */
@@ -141,25 +126,25 @@ header a::before {
         height: 100px;
     }
 
-    .logo::before {
-        content: url('../imagenes/logo3.png');
-        display: inline-block;
-        width: 100px; /* Tamaño más grande para dispositivos móviles */
-        height: 100px;
+    #list{
+        margin-top: 120px;
     }
 
     .side-menu.active {
-        width: 150px;
+        width: 120px;
     }
 
     #main-content.active {
-        margin-left: 150px;
+        margin-left: 120px;
     }
 
     #title{
         font-size: 60px;
     }
     
+    #main-content{
+        margin-top: 120px;
+    }
 }
 
 /* Estilos para pantallas muy pequeñas (por ejemplo, teléfonos en modo retrato) */
@@ -171,29 +156,24 @@ header a::before {
         height: 80px;
     }
 
-    .logo::before {
-        content: url('../imagenes/logo4.png');
-        display: inline-block;
-        width: 80px; /* Tamaño aún más grande para pantallas muy pequeñas */
-        height: 80px;
+    #list{
+        margin-top: 100px;
     }
 
     .side-menu.active {
-        width: 130px;
+        width: 100px;
     }
 
     #main-content.active {
-        margin-left: 130px;
+        margin-left: 100px;
     }
 
     #title{
         font-size: 50px;
     }
-}
 
-@media (max-width: 360px) {
-    #title{
-        font-size: 40px;
+    #main-content{
+        margin-top: 100px;
     }
 }
 

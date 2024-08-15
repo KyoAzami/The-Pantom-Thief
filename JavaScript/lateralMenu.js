@@ -2,15 +2,19 @@
 const menuToggle = document.getElementById('menu-toggle');
 const sideMenu = document.getElementById('side-menu');
 const mainContent = document.getElementById('main-content');
-const closeMenu = document.getElementById('close-menu');
+
+// Verifica si el menú lateral estaba activo en la última sesión
+if (localStorage.getItem('menuActive') === 'true') {
+    sideMenu.classList.add('active');
+    mainContent.classList.add('active');
+}
 
 // Agrega un evento para abrir/cerrar el menú lateral
 menuToggle.addEventListener('click', function() {
     sideMenu.classList.toggle('active');
     mainContent.classList.toggle('active');
-});
-
-closeMenu.addEventListener('click', function() {
-    sideMenu.classList.remove('active');
-    mainContent.classList.remove('active');
+    
+    // Guarda el estado del menú en localStorage
+    const isActive = sideMenu.classList.contains('active');
+    localStorage.setItem('menuActive', isActive);
 });
