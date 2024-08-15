@@ -1,0 +1,218 @@
+body{
+    background-color: #3c3c3c;
+    background-image: url(../imagenes/background.jpg);
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-position: center center; /* Centra la imagen de fondo */
+    background-attachment: fixed; /* Hace que la imagen de fondo sea estática */
+    background-size: cover; /* Asegura que la imagen de fondo cubra toda la pantalla */
+}
+
+@font-face {
+    font-family: 'expose';
+    src: url(../fonts/Expose-Regular.otf);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: black;
+    width: 100%; /* Hace que el header ocupe todo el ancho de la pantalla */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total del header */
+    position: relative; /* Permite la alineación correcta dentro del flujo del documento */
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-family: 'expose';
+    font-size: 100px;
+    text-align: center;
+    color: white;
+}
+
+/* Estilos del botón de menú */
+#menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#close-menu{
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilos del menú lateral */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+}
+
+.side-menu div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    width: 80%; /* Hace que el header ocupe todo el ancho de la pantalla */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total del header */
+    position: relative; /* Permite la alineación correcta dentro del flujo del documento */
+}
+
+#list a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+#list a:hover {
+    background-color: #575757;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#main-content {
+    transition: margin-left 0.5s;
+}
+
+/* Ancho del menú cuando está desplegado */
+.side-menu.active {
+    width: 250px;
+}
+
+/* Mueve el contenido principal cuando el menú está desplegado */
+#main-content.active {
+    margin-left: 250px;
+}
+
+header a {
+    margin-left: auto;
+    text-decoration: none;
+}
+
+.logo{
+    margin-left: auto;
+    text-decoration: none;
+}
+
+
+/* Estilos generales */
+header a::before {
+    content: url('../imagenes/logo2.png');
+    display: inline-block;
+    width: 150px; /* Tamaño del ícono en pantallas grandes */
+    height: 150px;
+}
+
+.logo::before {
+    content: url('../imagenes/logo2.png');
+    display: inline-block;
+    width: 150px; /* Tamaño del ícono en pantallas grandes */
+    height: 150px;
+}
+
+/* Estilos para pantallas más pequeñas (por ejemplo, móviles) */
+@media (max-width: 768px) {
+    header a::before {
+        content: url('../imagenes/logo3.png');
+        display: inline-block;
+        width: 100px; /* Tamaño más grande para dispositivos móviles */
+        height: 100px;
+    }
+
+    .logo::before {
+        content: url('../imagenes/logo3.png');
+        display: inline-block;
+        width: 100px; /* Tamaño más grande para dispositivos móviles */
+        height: 100px;
+    }
+
+    .side-menu.active {
+        width: 150px;
+    }
+
+    #main-content.active {
+        margin-left: 150px;
+    }
+
+    #title{
+        font-size: 60px;
+    }
+    
+}
+
+/* Estilos para pantallas muy pequeñas (por ejemplo, teléfonos en modo retrato) */
+@media (max-width: 480px) {
+    header a::before {
+        content: url('../imagenes/logo4.png');
+        display: inline-block;
+        width: 80px; /* Tamaño aún más grande para pantallas muy pequeñas */
+        height: 80px;
+    }
+
+    .logo::before {
+        content: url('../imagenes/logo4.png');
+        display: inline-block;
+        width: 80px; /* Tamaño aún más grande para pantallas muy pequeñas */
+        height: 80px;
+    }
+
+    .side-menu.active {
+        width: 130px;
+    }
+
+    #main-content.active {
+        margin-left: 130px;
+    }
+
+    #title{
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 360px) {
+    #title{
+        font-size: 40px;
+    }
+}
+
+main h1{
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-family: 'expose';
+    font-size: 100px;
+    text-align: center;
+    color: white;
+}
+
+h3{
+    font-family: 'expose';
+    color: white;
+    font-size: 40px;
+}
+
+article p{
+    color: white;
+}
