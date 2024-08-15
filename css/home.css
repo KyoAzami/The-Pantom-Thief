@@ -46,14 +46,6 @@ header h1 {
     cursor: pointer;
 }
 
-#close-menu{
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
 /* Estilos del menú lateral */
 .side-menu {
     height: 100%;
@@ -117,6 +109,92 @@ header a::before {
     height: 150px;
 }
 
+main h1{
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-family: 'expose';
+    font-size: 100px;
+    text-align: center;
+    color: white;
+}
+
+h3{
+    font-family: 'expose';
+    color: white;
+}
+
+article p{
+    color: white;
+}
+
+#text1 {
+    background-color: rgba(50, 50, 50, 0.5); /* Color negro con 70% de opacidad */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    color: white; /* Texto en color blanco para contraste */
+    max-width: 800px; /* Ancho máximo para el recuadro */
+    margin: 0 auto; /* Centrando el recuadro */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto de elevación */
+}
+
+
+#b1{
+    background-color: #d92323;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+#b1:hover{
+    background-color: #0d0d0d;
+    cursor: pointer;
+}
+
+#form1 {
+    background-color: #0d0d0d; /* Fondo oscuro */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    max-width: 500px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrando el formulario */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para efecto de elevación */
+}
+
+#form1 label {
+    display: block; /* Hacer que los labels ocupen todo el ancho disponible */
+    font-family: 'Arial', sans-serif; /* Fuente estilizada, puedes cambiarla por otra si lo deseas */
+    font-weight: bold; /* Texto en negrita */
+    color: white; /* Color del texto */
+    margin-bottom: 10px; /* Espacio debajo de cada label */
+}
+
+#form1 .ctrl {
+    width: 100%; /* Que los campos de entrada ocupen todo el ancho */
+    padding: 10px; /* Espacio interno en los inputs */
+    margin-bottom: 15px; /* Espacio debajo de cada campo */
+    border-radius: 10px; /* Bordes redondeados en los campos de entrada */
+    border: 1px solid #444; /* Borde gris oscuro */
+    background-color: #1a1a1a; /* Fondo oscuro para los inputs */
+    color: white; /* Texto en blanco */
+    box-sizing: border-box; /* Incluir padding y borde en el tamaño total del input */
+}
+
+#form1 .ctrl::placeholder {
+    color: #777; /* Color para el texto de los placeholders */
+}
+
+#t2{
+    font-size: 80px;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+
+
 /* Estilos para pantallas más pequeñas (por ejemplo, móviles) */
 @media (max-width: 768px) {
     header a::before {
@@ -144,6 +222,10 @@ header a::before {
     
     #main-content{
         margin-top: 120px;
+    }
+
+    #t2{
+        font-size: 60px;
     }
 }
 
@@ -175,34 +257,8 @@ header a::before {
     #main-content{
         margin-top: 100px;
     }
-}
 
-main h1{
-    flex-grow: 1;
-    text-align: center;
-    margin: 0;
-    font-family: 'expose';
-    font-size: 100px;
-    text-align: center;
-    color: white;
-}
-
-h3{
-    font-family: 'expose';
-    color: white;
-    font-size: 40px;
-}
-
-article p{
-    color: white;
-}
-
-#text1 {
-    background-color: rgba(50, 50, 50, 0.4); /* Color negro con 70% de opacidad */
-    border-radius: 15px; /* Bordes redondeados */
-    padding: 20px; /* Espacio interno */
-    color: white; /* Texto en color blanco para contraste */
-    max-width: 800px; /* Ancho máximo para el recuadro */
-    margin: 0 auto; /* Centrando el recuadro */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto de elevación */
+    #t2{
+        font-size: 40px;
+    }
 }
