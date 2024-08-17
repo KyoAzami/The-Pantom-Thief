@@ -168,7 +168,7 @@ article p{
     font-family: 'Arial', sans-serif; /* Fuente estilizada, puedes cambiarla por otra si lo deseas */
     font-weight: bold; /* Texto en negrita */
     color: white; /* Color del texto */
-    margin-bottom: 10px; /* Espacio debajo de cada label */
+    margin-bottom: 15px; /* Espacio debajo de cada label */
 }
 
 #form1 .ctrl {
@@ -191,6 +191,41 @@ article p{
     text-align: center;
     margin-top: 2%;
     margin-bottom: 3%;
+}
+
+#send.formButton {
+    background-color: #d92323; /* Fondo oscuro */
+    color: white; /* Texto en blanco */
+    padding: 10px 20px; /* Espacio interno */
+    border: 2px solid #444; /* Borde gris oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    font-family: 'Arial', sans-serif; /* Fuente estilizada */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Suavizar el cambio de colores */
+    width: 100%; /* Ancho total del botón */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    box-sizing: border-box; /* Incluir padding y borde en el tamaño total */
+}
+
+#send.formButton:hover {
+    background-color: #0d0d0d; /* Cambiar fondo al pasar el ratón */
+    color: #ddd; /* Cambiar color de texto al pasar el ratón */
+}
+
+/* Estilo para ocultar el section inicialmente */
+.hidden {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: height 0.8s ease, opacity 0.8s ease;
+}
+
+/* Estilo para desplegar el section */
+.visible {
+    height: auto;
+    opacity: 1;
+    transition: height 0.8s ease, opacity 0.8s ease;
 }
 
 
