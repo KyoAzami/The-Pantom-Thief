@@ -138,6 +138,15 @@ article p{
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto de elevación */
 }
 
+#text2{
+    background-color: rgba(50, 50, 50, 0.5); /* Color negro con 70% de opacidad */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    color: white; /* Texto en color blanco para contraste */
+    max-width: 800px; /* Ancho máximo para el recuadro */
+    margin: 0 auto; /* Centrando el recuadro */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto de elevación */
+}
 
 #b1{
     background-color: #d92323;
@@ -151,6 +160,21 @@ article p{
 
 #b1:hover{
     background-color: #0d0d0d;
+    cursor: pointer;
+}
+
+#b2{
+    background-color: #0d0d0d;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+#b2:hover{
+    background-color: #d92323;
     cursor: pointer;
 }
 
@@ -228,7 +252,9 @@ article p{
     transition: height 0.8s ease, opacity 0.8s ease;
 }
 
-
+#gracias{
+    text-align: center;
+}
 
 /* Estilos para pantallas más pequeñas (por ejemplo, móviles) */
 @media (max-width: 768px) {
