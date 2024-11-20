@@ -131,14 +131,14 @@ article p{
 #text1 {
     background-color: rgba(50, 50, 50, 0.5); /* Fondo con opacidad */
     border-radius: 15px; /* Bordes redondeados */
-    padding: 20px; /* Espaciado interno */
-    color: white; /* Texto en blanco */
-    max-width: 800px; /* Ancho máximo */
-    margin: 0 auto; /* Centrado horizontal */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    position: relative; /* Para posicionar elementos dentro */
-    overflow: hidden; /* Asegura que la imagen redonda no sobresalga fuera del contenedor */
-    text-align: center; /* Centra el texto dentro del section */
+    padding: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    max-width: 90%; /* Se ajusta al 90% del ancho disponible */
+    margin: 0 auto; /* Centrado */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilo para la imagen dentro del section */
@@ -156,27 +156,38 @@ article p{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Espaciado entre los íconos */
-    margin-top: 20px; /* Espaciado superior */
+    flex-wrap: wrap; /* Permite que los iconos se acomoden en varias filas si es necesario */
 }
 
+.social-links img {
+    width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
+    max-width: 250px; /* Ancho máximo */
+    height: auto; /* Mantener las proporciones */
+    border-radius: 50%; /* Redondear la imagen */
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+}
+
+
 .social-links a {
-    color: white; /* Color blanco para los íconos */
-    font-size: 30px; /* Tamaño de los íconos */
-    transition: color 0.3s ease, transform 0.3s ease; /* Efecto de transición para hover */
+    display: inline-block;
+    font-size: 2rem; /* Tamaño relativo de los iconos */
+    margin: 10px; /* Espacio entre iconos */
+    color: #fff; /* Color blanco */
+    transition: color 0.3s ease-in-out;
 }
 
 .social-links a:hover {
-    color: #d92323; /* Cambia el color cuando el mouse pasa por encima */
-    transform: scale(1.1); /* Efecto de zoom suave */
+    color: #d92323; /* Cambia el color cuando el usuario pase el mouse */
 }
+
 
 /* Estilo para el encabezado */
 #text1 h2 {
-    font-size: 28px;
     text-align: center;
     color: white;
     margin-top: 20px;
+    font-size: 3vw; /* El tamaño del texto se ajusta según el ancho de la ventana */
+    color: white;
 }
 
 
@@ -337,6 +348,14 @@ article p{
     #t2{
         font-size: 60px;
     }
+
+    .social-links a {
+        font-size: 1.5rem; /* Tamaño más pequeño para pantallas pequeñas */
+    }
+
+    #text1 h2 {
+        font-size: 8vw; /* Ajuste del tamaño del texto */
+    }
 }
 
 /* Estilos para pantallas muy pequeñas (por ejemplo, teléfonos en modo retrato) */
@@ -371,6 +390,15 @@ article p{
     #t2{
         font-size: 40px;
     }
+
+    .social-links a {
+        font-size: 2rem; /* Tamaño más grande para pantallas más grandes */
+    }
+
+    #text1 h2 {
+        font-size: 5vw; /* Ajuste del tamaño del texto */
+    }
+
 }
 
 
